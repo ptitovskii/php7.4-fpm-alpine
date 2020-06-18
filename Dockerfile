@@ -4,8 +4,7 @@ ADD https://dl.bintray.com/php-alpine/key/php-alpine.rsa.pub /etc/apk/keys/php-a
 RUN apk --update add ca-certificates && \
     echo "https://dl.bintray.com/php-alpine/v3.11/php-7.4" >> /etc/apk/repositories
     
-RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories && \
-    apk --update add \
+RUN apk --update add \
         php7 \
         php7-bcmath \
         php7-dom \

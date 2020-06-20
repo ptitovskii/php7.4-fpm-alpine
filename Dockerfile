@@ -35,6 +35,7 @@ RUN apk --update add \
         php7-xmlreader \
         php7-xmlwriter \
         php7-zip \
+        curl \
     && rm -rf /var/cache/apk/*
 
 ENV COMPOSER_VERSION 1.9.3

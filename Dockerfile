@@ -5,6 +5,7 @@ RUN apk --update add ca-certificates && \
     echo "https://dl.bintray.com/php-alpine/v3.11/php-7.3" >> /etc/apk/repositories
 
 RUN apk --update add \
+        composer \
         php7 \
         php7-bcmath \
         php7-dom \
@@ -37,7 +38,5 @@ RUN apk --update add \
         php7-zip \
         curl \
     && rm -rf /var/cache/apk/*
-
-ENV COMPOSER_VERSION 1.9.3
 
 CMD ["php-fpm7", "-F"]
